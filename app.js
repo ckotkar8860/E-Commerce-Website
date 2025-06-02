@@ -33,6 +33,9 @@ app.use("/admins", adminsRouter);
 app.use("/users", usersRouter);
 app.use("/products", productsRouter);
 
-app.listen(3000, (err, res) => {
-  console.log("Listening on PORT 3000");
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Listening on PORT ${port}`);
 });
+
